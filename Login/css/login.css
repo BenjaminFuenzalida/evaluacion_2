@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5f7;
+    background-image:  linear-gradient(30deg, #070d76 12%, transparent 12.5%, transparent 87%, #070d76 87.5%, #070d76), linear-gradient(150deg, #070d76 12%, transparent 12.5%, transparent 87%, #070d76 87.5%, #070d76), linear-gradient(30deg, #070d76 12%, transparent 12.5%, transparent 87%, #070d76 87.5%, #070d76), linear-gradient(150deg, #070d76 12%, transparent 12.5%, transparent 87%, #070d76 87.5%, #070d76), linear-gradient(60deg, #070d7677 25%, transparent 25.5%, transparent 75%, #070d7677 75%, #070d7677), linear-gradient(60deg, #070d7677 25%, transparent 25.5%, transparent 75%, #070d7677 75%, #070d7677);
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .form-login{
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    text-align: center;
+  }
+
+  .form-title{
+    font-size: 2rem;
+    margin-bottom: .5em;
+  }
+
+  .form.paragraph{
+    font-weight: 300;
+  }
+
+  .link{
+    font-weight: 400;
+    color: #000;
+  }
+
+  .container{
+    margin-top: 3em;
+    display: grid;
+    gap: 2em;
+  }
+
+  .form-group{
+    position: relative;
+    --color: #5757577e;
+  }
+
+  .form-input{
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .form-input:focus,
+  .form-input:not(:placeholder-shown){
+    color: #4d4646;
+  }
+
+  .form-input:focus +.form-label,
+  .form-input:not(:placeholder-shown) + .form-label{
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #3866f2;
+  }
+
+  .form-label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+  }
+
+  .form-submit{
+    background: #3866f2;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+  }
+
+  .form-line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #3866f2;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+  }
+
+  .form-input:focus ∼ .form-line,
+  .form-input:not(:placeholder-shown) + .form-line{
+    transform: scale(1);
+  }
+
+@media (max-width:425px) {
+  .form-title{
+    font-size: 1.8rem;
+  }
+  
+}
+
+
+
+
+ /* 
+  body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg,#2980b9, #8e44ad);
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  
+  .center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  }
+  
+  
+  .center h1{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+  }
+  
+  
+  .center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  
+  
+  form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+  }
+  
+  .txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  .txt_field label{
+    position: relative;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s; 
+  }
+  
+  
+  input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  
+  input[type="submit"]:hover{
+    border-color: #2691d9;
+    transition: .5s;
+  }
+  
+  
+  .link_Ayuda{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #4841a5;
+  }
+  
+  .link_Ayuda a{
+    text-decoration: none;
+    color: #a6a6a6;
+    cursor: pointer;
+  }
+  
+  .link_Ayuda a:hover{
+    text-decoration: underline;
+  }
