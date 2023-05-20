@@ -7,6 +7,7 @@ const form = document.getElementById("form")
 const parrafo = document.getElementById("warnings")
 
 
+
 form.addEventListener("submit", e=>{
     e.preventDefault();
     let warnings = ""
@@ -46,4 +47,10 @@ form.addEventListener("submit", e=>{
         parrafo.innerHTML = "Enviado"
         console.log('enviado');
     }
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+    window.location.href = "/Login/LOGIN.html"; 
+  });
+
 })
+

@@ -3,6 +3,7 @@ const Email = document.getElementById("Email")
 const textarea = document.getElementById("textarea")
 const form = document.getElementById("form")
 const parrafo = document.getElementById("warnings")
+const boton_home = document.getElementById("home")
 
 form.addEventListener("submit", e=>{
     e.preventDefault();
@@ -32,5 +33,22 @@ form.addEventListener("submit", e=>{
         parrafo.innerHTML = "Enviado"
         console.log('enviado');
     }
+
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        window.location.href = "/HOME/Home.html"; 
+    });
 })
 
+form.addEventListener(boton_home, e=>{
+    e.preventDefault();
+
+
+
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        window.location.href = "/HOME/Home.html"; 
+    });
+
+
+})
